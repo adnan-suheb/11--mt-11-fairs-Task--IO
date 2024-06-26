@@ -1,0 +1,14 @@
+<div class="fairDetails">
+    <div class="banner mb-4">
+        <img [src]="getFairDetails.bannerUrl" [alt]="getFairDetails.fairName" [title]="getFairDetails.fairName">
+        <div class="fairContent">
+            <h3>{{getFairDetails.fairName|uppercase}}</h3>
+            <p class="mb-0">Event Type : {{getFairDetails.type}}</p>
+            <p class="mb-0">Event Date : {{getFairDetails.startDate|date}}</p>
+        </div>
+    </div>
+
+
+    <p *ngIf="getFairDetails.candidateDescription" [innerHTML]="getFairDetails.candidateDescription"></p>
+    <p *ngIf="getFairDetails.schoolDescription" [innerHTML]="getFairDetails.schoolDescription"></p>
+</div>

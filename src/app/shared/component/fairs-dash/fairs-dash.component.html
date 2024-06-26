@@ -1,0 +1,16 @@
+<section class="container-fluid mt-4">
+    <h2 class="text-center text-white p-2 fairHeading">Fair Cards</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <app-fairs-card 
+            *ngFor="let fair of fairData"
+             [getFair]="fair"
+             (click)="selectedFair=fair"
+            (emmitFair)="onEmmitFair($event)"
+            ></app-fairs-card>
+        </div>
+        <div class="col-md-8">
+            <app-fairs-details [getFairDetails]="selectedFair"></app-fairs-details>
+        </div>
+    </div>
+</section>
